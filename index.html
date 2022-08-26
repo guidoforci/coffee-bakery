@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>The Coffee & Bakery Store | Café, Pan y Nobleza </title>
+    <title>The Coffee & Bakery Store | Café, Pan & Nobleza. </title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <img src="./img/LOGOcbs-sinfondo.png" alt="logo de la empresa" class="logocbs">
-            <ul>
-                <li><a href="./index.html">WE ARE</a></li>
-                <li><a href="#carta">CARTA</a></li>
-                <li><a href="#galeria">GALERIA</a></li>
-                <li><a href="#contacto">CONTACTANOS</a></li>
-                <li><a href="#redes"><img src="img/media.png" alt="logo de link a redes sociales"></a></li>
-            </ul>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand"><img class="navbar-brand" src="./img/LOGOcbs-sinfondo.png"></img></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="color: white;">WE ARE!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos" style="color: white;">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria" style="color: white;">GALERIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactanos" style="color: white;">CONTACTANOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#redes" style="color: white;"><img src="img/like.png" alt="logo de link a redes sociales" class="media"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-    </header>
+</header>
+
     <main>
-        <section id="carta">CARTA</section>
+        <section class="weare">
+            <div>
+                <img src="./img/index.jpg" alt="" class="fotoindex">
+            </div>
+        </section>
+        <section id="carta">PRODUCTOS</section>
         <section id="galeria">GALERIA</section>
-        <section id="contacto">CONTACTO</section>
+        <section id="contacto">CONTACTANOS</section>
     </main>
-    <footer id="redes">
-        <p>SOCIAL</p>
-        <a href="https://www.facebook.com" target="_blank"><img src="./img/facebook.png" alt="logo con link a facebook"></a>
-        <a href="https://www.instragram.com" target="_blank"><img src="./img/instagram.png" alt="logo con link a instagram"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="./img/twitter.png" alt="logo con link a twitter"></a>
+    <footer id="redes" class="footer">
+        <a href="https://www.facebook.com" target="_blank"><img src="./img/fc.png" alt="logo con link a facebook"
+                class="iconos"></a>
+        <a href="https://www.instragram.com" target="_blank"><img src="./img/ig.png" alt="logo con link a instagram"
+                class="iconos"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="./img/twitter.png" alt="logo con link a twitter"
+                class="iconos"></a>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

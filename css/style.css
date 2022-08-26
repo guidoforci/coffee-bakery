@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.header {
+  position: fixed;
+  top: 10;
+  width: 100%; }
+  .header .navbar {
+    background-color: rgba(0, 0, 0, 0.603); }
+    .header .navbar .container-fluid .navbar-brand {
+      width: 250px;
+      height: 100%;
+      margin-top: -80px;
+      margin-bottom: -80px; }
+    .header .navbar .container-fluid .collapse .navbar-nav {
+      list-style: none;
+      align-items: center; }
+      .header .navbar .container-fluid .collapse .navbar-nav .media {
+        width: 55px;
+        height: 45px; }
+
+.weare div .fotoindex {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  background-color: black; }
+  .footer .iconos {
+    margin: 0px 10px 0px 10px;
+    width: 50px;
+    height: 100%; }
