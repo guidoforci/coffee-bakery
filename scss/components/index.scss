@@ -1,6 +1,75 @@
-.weare {
-    div {.fotoindex {width: 100%; 
-        height: 100%; 
-        background-size: cover; 
-        background-repeat: no-repeat; 
-        background-attachment: fixed;}}}
+.hero {font-family: 'DM Serif Display', serif;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(../img/index.jpg);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {color: rgba(255, 255, 255, 0.945); 
+        font-size: 60px; 
+        border: solid 2px; 
+        border-radius: 5px; 
+        padding: 10px}
+    h2 {color: rgba(255, 255, 255, 0.945); 
+        font-family: 'Righteous', cursive;}
+    a {text-decoration: none;
+        color: rgba(112, 44, 44, 0.63);
+        width: 200px;
+        height: 60px;
+        margin-top: 50px;
+        background-color: rgba(0, 0, 0, 0.788);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Righteous', cursive;
+        border-radius: 5px;
+        transition: all 0.5s;
+        &:hover {color: rgba(255, 255, 255, 0.945); background-color: rgba(112, 44, 44, 0.63); letter-spacing: 1px;}}}
+
+.weare {color: rgba(255, 255, 255, 0.945);
+    background-color: black; display: flex; padding-top: 100px;
+    .weare-text {flex-direction: column; text-align: center;
+    h3 {font-family: 'DM Serif Display', serif; font-size: 50px;
+        }
+    p {margin: 0px 100px 0px 100px;
+        font-family: 'Righteous', cursive; font-size: 25px; letter-spacing: 2px;
+    .marca {font-family: 'DM Serif Display', serif; padding: 7px; font-size: 22px;}}}
+    .weare-img {
+.imgweare {margin-bottom: 20px; margin-right: 100px; width: 500px; height: 600px;}}}
+
+.productos {background-color: black; background-image: url(../img/productos.jpg);
+    background-position: center; background-repeat: no-repeat;
+    width: 100%; height: 100vh; 
+    h3 {color: rgba(255, 255, 255, 0.863); padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        font-family: 'Righteous', cursive;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(112, 44, 44, 0.63);}}
+
+        .galeria {background-color: black; background-image: url(../img/productos.jpg);
+            background-position: center; background-repeat: no-repeat;
+            width: 100%; height: 100%; 
+            h3 {color: rgba(255, 255, 255, 0.863); padding-top: 20px;
+                padding-bottom: 20px;
+                display: flex;
+                font-family: 'Righteous', cursive;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(112, 44, 44, 0.63);}}
+
+                .contactanos {background-color: black; background-image: url(../img/productos.jpg);
+                    background-position: center; background-repeat: no-repeat;
+                    width: 100%; height: 100%; 
+                    h3 {color: rgba(255, 255, 255, 0.863); padding-top: 20px;
+                        padding-bottom: 20px;
+                        display: flex;
+                        font-family: 'Righteous', cursive;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(112, 44, 44, 0.63);}}
