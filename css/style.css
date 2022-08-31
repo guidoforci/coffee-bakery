@@ -84,8 +84,9 @@ body {
   .weare .weare-img .imgweare {
     margin-bottom: 20px;
     margin-right: 100px;
-    width: 500px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
     box-shadow: 5px 5px 26px -15px;
     color: rgba(112, 44, 44, 0.63);
     transition: all 0.5s; }
@@ -112,7 +113,7 @@ body {
 
 .galeria {
   background-color: black;
-  background-image: url(../img/productos.jpg);
+  background-image: url(../img/cafeengrano.jpg);
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
