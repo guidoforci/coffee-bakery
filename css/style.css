@@ -3,21 +3,13 @@
   padding: 0;
   box-sizing: border-box; }
 
-html {
-  width: 100%;
-  height: 100%; }
-
-body {
-  width: 100%;
-  height: 100%; }
-
 .header {
   position: fixed;
   top: 10;
   font-family: 'Righteous', cursive;
   font-size: 15px;
   width: 100%;
-  height: 100%; }
+  height: 100vh; }
   .header .navbar {
     background-color: rgba(0, 0, 0, 0.603); }
     .header .navbar .container-fluid .navbar-brand {
