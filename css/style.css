@@ -16,7 +16,8 @@ body {
   top: 10;
   font-family: 'Righteous', cursive;
   font-size: 15px;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   .header .navbar {
     background-color: rgba(0, 0, 0, 0.603); }
     .header .navbar .container-fluid .navbar-brand {
@@ -157,19 +158,21 @@ body {
     width: 250px;
     height: 200px; }
 
-.card .card-body .btn {
-  background-color: rgba(112, 44, 44, 0.63);
-  color: white;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px; }
+.card {
+  padding-top: 50px; }
+  .card .card-body .btn {
+    background-color: rgba(112, 44, 44, 0.63);
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px; }
 
 .footer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px 20px 0px;
+  padding: 50px 0px 20px 0px;
   background-color: black; }
   .footer a {
     width: 50px;
