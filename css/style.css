@@ -1,15 +1,22 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%; }
+
 .header {
   position: fixed;
   top: 10;
-  width: 100%;
   font-family: 'Righteous', cursive;
-  font-size: 13px;
-  letter-spacing: 1px; }
+  font-size: 15px;
+  width: 100%; }
   .header .navbar {
     background-color: rgba(0, 0, 0, 0.603); }
     .header .navbar .container-fluid .navbar-brand {
@@ -21,8 +28,8 @@ body {
       list-style: none;
       align-items: center; }
       .header .navbar .container-fluid .collapse .navbar-nav .media {
-        width: 55px;
-        height: 45px; }
+        width: 50px;
+        height: 40px; }
 
 .hero {
   font-family: 'DM Serif Display', serif;
@@ -73,7 +80,10 @@ body {
     text-align: center; }
     .weare .weare-text h3 {
       font-family: 'DM Serif Display', serif;
-      font-size: 50px; }
+      font-size: 50px;
+      transition: all 0.3s; }
+      .weare .weare-text h3:hover {
+        color: rgba(112, 44, 44, 0.61); }
     .weare .weare-text p {
       margin: 0px 100px 0px 100px;
       font-family: 'Righteous', cursive;
@@ -87,7 +97,13 @@ body {
     margin-bottom: 20px;
     margin-right: 100px;
     width: 500px;
-    height: 600px; }
+    height: 600px;
+    box-shadow: 5px 5px 26px -15px;
+    color: rgba(112, 44, 44, 0.63);
+    transition: all 0.5s; }
+    .weare .weare-img .imgweare:hover {
+      transform: scale(1.05);
+      overflow: hidden; }
 
 .productos {
   background-color: black;
@@ -125,22 +141,31 @@ body {
 
 .contactanos {
   background-color: black;
-  background-image: url(../img/productos.jpg);
   background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-family: 'Righteous', cursive;
+  color: rgba(255, 255, 255, 0.863); }
   .contactanos h3 {
-    color: rgba(255, 255, 255, 0.863);
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
-    font-family: 'Righteous', cursive;
     justify-content: center;
     align-items: center;
     background-color: rgba(112, 44, 44, 0.63); }
+  .contactanos iframe {
+    width: 250px;
+    height: 200px; }
+
+.card .card-body .btn {
+  background-color: rgba(112, 44, 44, 0.63);
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .footer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

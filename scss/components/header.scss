@@ -1,10 +1,10 @@
-.header {position: fixed; top: 10; width: 100%; font-family: 'Righteous', cursive; font-size: 13px; letter-spacing: 1px;
+.header {position: fixed; top: 10; font-family: 'Righteous', cursive; font-size: 15px; width: 100%;
     .navbar {background-color: rgba(0, 0, 0, 0.603); 
         .container-fluid {
             .navbar-brand {width: 250px; height: 100%; margin-top: -50px; margin-bottom: -50px;}
             .collapse {
                 .navbar-nav {list-style: none; align-items: center;
-                    .media {width: 55px; height: 45px; }
+                    .media {width: 50px; height: 40px;}
                 }
             }
         }
