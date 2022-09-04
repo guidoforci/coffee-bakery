@@ -1,7 +1,8 @@
 .header {font-family: 'Righteous', cursive; font-size: 15px; width: 100vw; position: fixed;
     .navbar {padding-right: 50px; padding: 0px 50px 0px 0px;
         .container-fluid {
-                .navbar-nav {list-style: none; align-items: center;
+                .navbar-nav {list-style: none; align-items: center; 
+                    .nav-item {a {color: rgba(255, 255, 255, 0.945);margin-right: 5px; transition: all 0.3s; &:hover {transform: scale(1.03); color: rgb(146, 56, 56) ;}}}
                 }
             }
         }

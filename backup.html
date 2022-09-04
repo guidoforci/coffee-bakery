@@ -1,34 +1,38 @@
-<header class="header">
-    <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand"><img class="navbar-brand" src="./img/LOGOcbs-sinfondo.png"></img></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#weare"
-                            style="color: rgba(255, 255, 255, 0.945);margin-right: 5px;">WE ARE!</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#productos"
-                            style="color: rgba(255, 255, 255, 0.945);margin-right: 5px;">PRODUCTOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#galeria"
-                            style="color: rgba(255, 255, 255, 0.945); margin-right: 5px;">GALERÍA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contactanos"
-                            style="color: rgba(255, 255, 255, 0.945); margin-right: 5px;">CONTACTANOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#redes" style="color: rgba(255, 255, 255, 0.945);"><i class="fa-solid fa-mug-hot fa-lg"></i></a>
-                    </li>
-                </ul>
+<section class="contact-wrap">
+    <form action class="contact-form">
+        <div>
+            <div class="form-floating">
+                <input type="text" class="form-control">
+                <label for="floatingInput">Nombre</label>
             </div>
         </div>
-    </nav>
-</header>
+        <div>
+            <div class="input-block">
+                <input type="text" class="form-control">
+                <label for>Email</label>
+            </div>
+        </div>
+        <div>
+            <div class="input-block">
+                <input type="text" class="form-control">
+                <label for>Asunto</label>
+            </div>
+        </div>
+        <div>
+            <div class="input-block textarea">
+                <textarea rows="3" type="text" class="form-control"></textarea>
+                <label for>¿En qué podemos ayudarte?</label>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
