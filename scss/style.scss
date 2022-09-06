@@ -1,8 +1,95 @@
-@import "./base/generales.scss";
-@import "./base/queries.scss";
-@import "./base/variables.scss";
-@import "./base/queries.scss";
-@import "./components/header.scss";
-@import "./components/index.scss";
-@import "./components/footer.scss";
+@import "./base/generales";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/index";
 
+
+/*----RESPONSIVE HEADER----*/
+@media screen and (max-width: 390px)
+{.header {.navbar {.container-fluid {.navbar-brand {margin: 0px -30px 0px 0px;}}}}}
+
+/*----RESPONSIVE MAIN HERO----*/
+@media screen and (max-width: 866px)
+{.hero {h1 {font-size: 50px;}}}
+
+@media screen and (max-width: 730px)
+{.hero {h1 {font-size: 40px;}}}
+
+@media screen and (max-width: 570px)
+{.hero {h1 {font-size: 30px;}}}
+
+@media screen and (max-width: 450px)
+{.hero {h1 {font-size: 20px;}
+h2 {font-size: 20px;}}}
+
+/*----RESPONSIVE MAIN WEARE----*/
+@media screen and (max-width: 800px)
+{.weare {.weare-text {p {margin: 0px 100px 50px 100px;}}}}
+
+@media screen and (max-width: 650px)
+{.weare {.weare-text {p {margin: 0px 50px 40px 50px;}}}}
+
+@media screen and (max-width: 430px)
+{.weare {.weare-text {p {margin: 0px 20px 40px 20px;}}
+.weare-img {.imgweare {width: 300px;
+    height: 300px;}}}}
+
+
+/*----RESPONSIVE MAIN CONSULTAS----*/
+@media screen and (max-width: 650px)
+{.contactanos {.formulario {width: 50vw;}}}
+
+@media screen and (max-width: 400px)
+{.contactanos {.formulario {width: 70vw;}}}
+
+/*----RESPONSIVE MAIN GALERIA----*/
+@media screen and (max-width: 900px)
+{.galeria {.gridgallery {
+    grid-template-columns: repeat(3, 1fr);
+    .galpic:nth-child(15)   {grid-column: span 4; grid-row: span 3;}}}}
+
+@media screen and (max-width: 750px)
+{.galeria {.gridgallery {
+    grid-template-columns: repeat(6, 1fr);
+    .galpic:nth-child(1)   {grid-column-start: span 6;}
+    .galpic:nth-child(2)   {grid-column: span 2;}
+    .galpic:nth-child(3)   {grid-column: span 2;}
+    .galpic:nth-child(4)   {grid-column: span 2;}
+    .galpic:nth-child(5)   {grid-column: span 6;}
+    .galpic:nth-child(7)   {grid-row: span 2; grid-column: span 4;}
+    .galpic:nth-child(8)   {grid-row: span 2; grid-column: span 2;}
+    .galpic:nth-child(9)   {grid-row: span 2; grid-column: span 2;}
+    .galpic:nth-child(10)   {grid-row: span 2; grid-column: span 2;}
+    .galpic:nth-child(11)   {grid-column: span 2;}
+    .galpic:nth-child(12)   {grid-column: span 2;}
+    .galpic:nth-child(13)   {grid-column: span 2;}
+    .galpic:nth-child(14)   {grid-column: span 6;}
+    .galpic:nth-child(15)   {grid-column: span 6;}}}}
+
+@media screen and (max-width: 550px)
+    {.galeria {.gridgallery {
+        .galpic:nth-child(2)   {grid-column: span 4;}
+        .galpic:nth-child(4)   {grid-column: span 6;}
+        .galpic:nth-child(6)   {grid-column: span 6;}
+        .galpic:nth-child(9)   {grid-column: span 3;}
+        .galpic:nth-child(10)   {grid-column: span 3;}}}}
+
+@media screen and (max-width: 470px)
+        {.galeria {.gridgallery {grid-template-columns: 1fr;
+            margin: 50px 20px 50px 20px; 
+        .galpic:nth-child(2)   {grid-column: span 6; grid-row: span 2;}
+        .galpic:nth-child(3)   {grid-column: span 6; grid-row: span 2;}
+        .galpic:nth-child(4)   {grid-column: span 6; grid-row: span 2;}
+        .galpic:nth-child(5)   {grid-column: span 6; grid-row: span 2;}
+        .galpic:nth-child(6)   {grid-column: span 6; grid-row: span 3;}
+        .galpic:nth-child(7)   {grid-column: span 6; grid-row: span 3;}
+        .galpic:nth-child(8)   {grid-column: span 6;}
+        .galpic:nth-child(11)   {grid-column: span 6; grid-row: span 2;}
+        .galpic:nth-child(12)   {grid-column: span 6; grid-row: span 2;}
+        .galpic:nth-child(13)   {grid-column: span 6; grid-row: span 2;}
+        .galpic:nth-child(9)   {grid-column: span 6;}
+        .galpic:nth-child(10)   {grid-column: span 6; grid-row: span 4;}}}}
+
+        @media screen and (max-width: 360px)
+        {.galeria {.gridgallery {grid-template-columns: 1fr;
+            margin: 50px 10px 50px 10px;}}}

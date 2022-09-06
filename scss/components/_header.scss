@@ -1,0 +1,65 @@
+.header {font-family: 'Righteous', cursive;
+    font-size: 16px;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+
+    .navbar {padding: 0px 50px 0px 0px;
+        .container-fluid {
+            .navbar-toggler {
+                .hamburguer-box {
+                    display: inline-block;
+                    position: relative;
+
+                    .hamburguer-inner {
+                        width: 40px;
+                        height: 4px;
+                        background-color: #fff;
+                        border-radius: 4px;
+                        position: absolute;
+                    }
+
+                    .hamburguer-inner::before {
+                        content: "";
+                        display: block;
+                        width: 40px;
+                        height: 4px;
+                        background-color: #fff;
+                        border-radius: 4px;
+                        position: absolute;
+                        top: -10px;
+                    }
+
+                    .hamburguer-inner::after {
+                        content: "";
+                        display: block;
+                        width: 40px;
+                        height: 4px;
+                        background-color: #fff;
+                        border-radius: 4px;
+                        position: absolute;
+                        top: 10px;
+                    }
+                }
+            }
+
+            .navbar-nav {
+                list-style: none;
+                align-items: center;
+
+                .nav-item {
+                    a {
+                        color: rgba(255, 255, 255, 0.945);
+                        margin-right: 5px;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            transform: scale(1.03);
+                            color: rgb(146, 56, 56);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
