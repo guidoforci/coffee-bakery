@@ -113,7 +113,7 @@ body {
     transition: all 0.5s; }
     .hero a:hover {
       color: rgba(255, 255, 255, 0.945);
-      background-color: rgba(112, 44, 44, 0.63);
+      background-color: #702c2ca1;
       letter-spacing: 1px; }
 
 .weare {
@@ -194,6 +194,7 @@ body {
       display: flex;
       justify-content: space-around; }
       .productos .multi-collapse .botoncafe .row {
+        width: 100%;
         margin-top: 20px;
         margin-bottom: 70px; }
         .productos .multi-collapse .botoncafe .row .card {
@@ -286,6 +287,8 @@ body {
       margin-bottom: 10px; }
       .contactanos .card .card-body .btn:hover {
         background-color: rgba(112, 44, 44, 0.884); }
+    .contactanos .card .card-body #horario {
+      margin-top: 50px; }
   .contactanos .formulario {
     width: 30vw;
     margin: 0 auto;
@@ -323,13 +326,21 @@ body {
 
 @media screen and (max-width: 570px) {
   .hero h1 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .hero a {
+    width: 190px;
+    height: 55px;
+    font-size: 15px; } }
 
 @media screen and (max-width: 450px) {
   .hero h1 {
     font-size: 20px; }
   .hero h2 {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .hero a {
+    width: 170px;
+    height: 45px;
+    font-size: 14px; } }
 
 /*----RESPONSIVE MAIN WEARE----*/
 @media screen and (max-width: 800px) {
@@ -347,7 +358,12 @@ body {
     width: 300px;
     height: 300px; } }
 
-/*----RESPONSIVE MAIN CONSULTAS----*/
+/*----RESPONSIVE MAIN PRODUCTOS----*/
+@media screen and (max-width: 370px) {
+  .productos .multi-collapse .botoncafe .row .card {
+    width: 16rem; } }
+
+/*----RESPONSIVE MAIN CONTACTANOS----*/
 @media screen and (max-width: 650px) {
   .contactanos .formulario {
     width: 50vw; } }

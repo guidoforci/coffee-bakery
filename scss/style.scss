@@ -16,11 +16,17 @@
 {.hero {h1 {font-size: 40px;}}}
 
 @media screen and (max-width: 570px)
-{.hero {h1 {font-size: 30px;}}}
+{.hero {h1 {font-size: 30px;}
+a {width: 190px;
+    height: 55px;
+    font-size: 15px;}}}
 
 @media screen and (max-width: 450px)
 {.hero {h1 {font-size: 20px;}
-h2 {font-size: 20px;}}}
+h2 {font-size: 20px;}
+a {width: 170px;
+    height: 45px;
+    font-size: 14px;}}}
 
 /*----RESPONSIVE MAIN WEARE----*/
 @media screen and (max-width: 800px)
@@ -34,8 +40,13 @@ h2 {font-size: 20px;}}}
 .weare-img {.imgweare {width: 300px;
     height: 300px;}}}}
 
+/*----RESPONSIVE MAIN PRODUCTOS----*/
+@media screen and (max-width: 370px)
+{.productos {.multi-collapse {.botoncafe  {.row {.card {width: 16rem;}}}}}}
 
-/*----RESPONSIVE MAIN CONSULTAS----*/
+
+
+/*----RESPONSIVE MAIN CONTACTANOS----*/
 @media screen and (max-width: 650px)
 {.contactanos {.formulario {width: 50vw;}}}
 
