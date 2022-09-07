@@ -43,7 +43,7 @@ body {
       display: inline-block;
       position: relative; }
       .header .navbar .container-fluid .navbar-toggler .hamburguer-box .hamburguer-inner {
-        width: 20px;
+        width: 25px;
         height: 4px;
         background-color: #fff;
         border-radius: 4px;
@@ -51,7 +51,7 @@ body {
       .header .navbar .container-fluid .navbar-toggler .hamburguer-box .hamburguer-inner::before {
         content: "";
         display: block;
-        width: 20px;
+        width: 25px;
         height: 4px;
         background-color: #fff;
         border-radius: 4px;
@@ -60,7 +60,7 @@ body {
       .header .navbar .container-fluid .navbar-toggler .hamburguer-box .hamburguer-inner::after {
         content: "";
         display: block;
-        width: 20px;
+        width: 25px;
         height: 4px;
         background-color: #fff;
         border-radius: 4px;
