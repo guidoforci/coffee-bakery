@@ -8,12 +8,9 @@ let totalCarrito;
 let contenedor = document.getElementById("divCarritoJS");
 
 
-function renderProds(){
-    for(const producto of productos){
+function renderProds() {
+    for (const producto of productos) {
         contenedor.innerHTML += `
-        <div class="multi-collapse collapse show" id="multiCollapse1">
-                <div class="botoncafe">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" style="justify-content: center;">
                         <div class="col">
                             <div class="card" style="margin: 0 auto;">
                                 <img src=${producto.imagen} class="card-img-top" alt="...">
@@ -22,11 +19,7 @@ function renderProds(){
                                 <p class="card-text" style="background-color: transparent; font-family: 'Nunito', sans-serif;">${producto.descripcion}</p>
                                 <button id="btn${producto.codigo}" class="btn btn-dark" style="font-family: 'Righteous', cursive;">Añadir al Carrito!</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        </div>             
         `;
     }
 
