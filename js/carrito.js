@@ -12,8 +12,8 @@ function renderProds() {
     for (const producto of productos) {
         contenedor.innerHTML += `
                         <div class="col">
-                            <div class="card" style="margin: 0 auto;">
-                                <img src=${producto.imagen} class="card-img-top" alt="...">
+                            <div class="card " style="margin: 0 auto;">
+                                <img src=${producto.imagen} class="card-img-top" alt="cards de productos">
                                 <div class="card-body">
                                 <h5 class="card-title" style="font-family: 'Righteous', cursive;">${producto.nombre} $${producto.precio}</h5>
                                 <p class="card-text" style="background-color: transparent; font-family: 'Nunito', sans-serif;">${producto.descripcion}</p>
@@ -43,5 +43,5 @@ function agregarAlCarrito(productoComprado){
     `;
     totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0);
     let Total = document.getElementById("total");
-    Total.innerText="Total a pagar: $"+totalCarrito;
+    Total.innerText="Total a pagar: $"+totalCarrito+"\n"+"\n"+"Gracias por tu compra."+"\n"+"Te esperamos por el local para retirar tu pedido!";
 }

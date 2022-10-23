@@ -202,17 +202,17 @@ body {
           height: 100%;
           background-color: rgba(0, 0, 0, 0.685);
           color: white;
-          margin-bottom: 10px;
+          margin-bottom: 100px;
           overflow: hidden; }
           .productos .multi-collapse .botoncafe .row .card img {
             transition: all 0.8s; }
             .productos .multi-collapse .botoncafe .row .card img:hover {
               transform: scale(1.05); }
   .productos #multiCollapse2 {
-    background-image: url(../img/productos6.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../img/productos7.jpg);
+    background-position:center;
+    
+    background-size:cover;
     background-attachment: fixed;
     width: 100%;
     padding: 20px; }
