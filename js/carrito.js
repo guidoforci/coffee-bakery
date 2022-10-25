@@ -1,14 +1,16 @@
 console.log(productos); // PRODUCTOS AGREGADOS EN arraydeproductos.js 
 
+//PRODUCTOS GUARDADOS EN EL LOCAL STORAGE
 const PasarProductosAJson = JSON.stringify (productos);
 localStorage.setItem ("Listado de Productos", PasarProductosAJson);
 
-const carrito = JSON.parse(localStorage.getItem ("Mis compras")) || [];
+// VARIABLES 
+let carrito = JSON.parse(localStorage.getItem ("Mis compras")) || [];
 
 let totalCarrito;
 let contenedor = document.getElementById("divCarritoJS");
 
-
+//RECORRIDO DE LAS CARDS 
 function renderProds() {
     for (const producto of productos) {
         contenedor.innerHTML += `
@@ -23,23 +25,22 @@ function renderProds() {
                         </div>             
         `;
     }
-
-    //EVENTO Click para comprar el producto.
+//EVENTO Click para comprar el producto.
     productos.forEach(producto => {
         document.getElementById(`btn${producto.codigo}`).addEventListener("click",function(){agregarAlCarrito(producto);});})
 }
 
 renderProds();
 
-function agregarAlCarrito(productoComprado){
-    carrito.push(productoComprado);
+function agregarAlCarrito(producto){
+    carrito.push(producto);
     console.table(carrito);
-    alert(productoComprado.nombre+" fue añadido a tu carrito!");
+    alert(producto.nombre+" fue añadido a tu carrito!");
     document.getElementById("tablabody").innerHTML += `
         <tr>
-            <td style="color: aliceblue;">${productoComprado.codigo}</td>
-            <td style="color: aliceblue;">${productoComprado.nombre}</td>
-            <td style="color: aliceblue;">${productoComprado.precio}</td>
+            <td style="color: aliceblue;">${producto.codigo}</td>
+            <td style="color: aliceblue;">${producto.nombre}</td>
+            <td style="color: aliceblue;">${producto.precio}</td>
         </tr>
     `;
     totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0);
@@ -48,6 +49,5 @@ function agregarAlCarrito(productoComprado){
 
     localStorage.setItem ("Mis compras", JSON.stringify (carrito));
 }
-
 
 
