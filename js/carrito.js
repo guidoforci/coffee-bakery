@@ -3,7 +3,7 @@ console.log(productos); // PRODUCTOS AGREGADOS EN arraydeproductos.js
 const PasarProductosAJson = JSON.stringify (productos);
 localStorage.setItem ("Listado de Productos", PasarProductosAJson);
 
-const carrito = [];
+let carrito = [];
 let totalCarrito;
 let contenedor = document.getElementById("divCarritoJS");
 
@@ -44,16 +44,17 @@ function agregarAlCarrito(productoComprado){
     totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0);
     let Total = document.getElementById("total");
     Total.innerText="Total a pagar: $"+totalCarrito+"\n"+"\n"+"Gracias por tu compra."+"\n"+"Te esperamos por el local para retirar tu pedido!";
+
+    localStorage.setItem ("Mi Carrito", JSON.stringify(carrito));
 }
 
 
 
-const ProductosAgregadosACarrito = JSON.stringify (productoComprado);
-localStorage.setItem ("Mi Carrito", ProductosAgregadosACarrito);
+const ProductosAgregadosACarrito = JSON.stringify (carrito);
 let carritoEnLS = JSON.stringify(localStorage.getItem ("Mi Carrito", ProductosAgregadosACarrito));
+
 
 if (carritoEnLS) {
     carrito = carritoEnLS
 };
 
-renderCarrito (); 
