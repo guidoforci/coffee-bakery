@@ -45,3 +45,15 @@ function agregarAlCarrito(productoComprado){
     let Total = document.getElementById("total");
     Total.innerText="Total a pagar: $"+totalCarrito+"\n"+"\n"+"Gracias por tu compra."+"\n"+"Te esperamos por el local para retirar tu pedido!";
 }
+
+
+
+const ProductosAgregadosACarrito = JSON.stringify (productoComprado);
+localStorage.setItem ("Mi Carrito", ProductosAgregadosACarrito);
+let carritoEnLS = JSON.stringify(localStorage.getItem ("Mi Carrito", ProductosAgregadosACarrito));
+
+if (carritoEnLS) {
+    carrito = carritoEnLS
+};
+
+renderCarrito (); 
