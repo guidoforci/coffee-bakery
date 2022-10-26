@@ -11,6 +11,17 @@ let totalCarrito;
 let contenedor = document.getElementById("divCarritoJS");
 
 //RECORRIDO DE LAS CARDS 
+function renderCarrito () {
+    carrito.forEach (carrito => {document.getElementById("tablabody").innerHTML += `
+    <tr>
+        <td style="color: aliceblue;">${carrito.codigo}</td>
+        <td style="color: aliceblue;">${carrito.nombre}</td>
+        <td style="color: aliceblue;">${carrito.precio}</td>
+        <td style="color: aliceblue;"><i class="fa-regular fa-trash-can"></i></td>
+    </tr>
+    `;})
+    };
+
 function renderProds() {
     for (const producto of productos) {
         contenedor.innerHTML += `
@@ -30,6 +41,7 @@ function renderProds() {
         document.getElementById(`btn${producto.codigo}`).addEventListener("click",function(){agregarAlCarrito(producto);});})
 }
 
+
 renderProds();
 
 function agregarAlCarrito(producto){
@@ -41,8 +53,11 @@ function agregarAlCarrito(producto){
             <td style="color: aliceblue;">${producto.codigo}</td>
             <td style="color: aliceblue;">${producto.nombre}</td>
             <td style="color: aliceblue;">${producto.precio}</td>
+            <td style="color: aliceblue;"><i class="fa-regular fa-trash-can"></i></td>
         </tr>
     `;
+
+    //TOTALIZAR COMPRA 
     totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0);
     let Total = document.getElementById("total");
     Total.innerText="Total a pagar: $"+totalCarrito+"\n"+"\n"+"Gracias por tu compra."+"\n"+"Te esperamos por el local para retirar tu pedido!";
@@ -51,3 +66,4 @@ function agregarAlCarrito(producto){
 }
 
 
+renderCarrito ();
