@@ -6,9 +6,9 @@ localStorage.setItem ("Listado de Productos", PasarProductosAJson);
 
 // VARIABLES 
 let carrito = JSON.parse(localStorage.getItem ("Mis compras")) || [];
-
 let totalCarrito;
 let contenedor = document.getElementById("divCarritoJS");
+let finalizarCompra = document.getElementById("finalizarCompra");
 
 //RECORRIDO DE LAS CARDS 
 function renderCarrito () {
@@ -47,7 +47,15 @@ renderProds();
 function agregarAlCarrito(producto){
     carrito.push(producto);
     console.table(carrito);
-    alert(producto.nombre+" fue añadido a tu carrito!");
+    //Alert
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: producto.nombre,
+        text:'Fue añadido a tu carrito!',
+        showConfirmButton: false,
+        timer: 1000});
+    //
     document.getElementById("tablabody").innerHTML += `
         <tr>
             <td style="color: aliceblue;">${producto.codigo}</td>
@@ -67,3 +75,18 @@ function agregarAlCarrito(producto){
 
 
 renderCarrito ();
+
+
+//BOTON FINALIZAR COMPRA
+finalizarCompra.addEventListener ("click", () => {
+    carrito = [];
+    document.getElementById("tablabody").innerHTML= "";
+    let Total = document.getElementById("total");
+    Total.innerText="Total a pagar: $";
+
+    Toastify({
+        text: "Compra Finalizada!"+"\n"+"A la brevedad recibirás un Email con el detalle.",
+        duration: 3000,
+        style: {background: "black",},
+        }).showToast();
+});
