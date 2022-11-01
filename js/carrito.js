@@ -74,10 +74,10 @@ function agregarAlCarrito(producto){
     <td style="color: aliceblue;"><i id= "fa-trash-can${producto.codigo}" class="fa-regular fa-trash-can"></i></td>
 </tr>
 `;
-
-
 }
 //document.getElementById (`fa-trash-can${carrito.codigo}`).addEventListener ("click", eliminarProducto)
+//document.querySelectorAll(".fa-trash-can").forEach((product) => {product.addEventListener("click", eliminarProducto);});
+
 
     //Alert
     Swal.fire({
@@ -107,6 +107,17 @@ function agregarAlCarrito(producto){
     Total.innerText="Total a pagar: $"+totalCarrito;
 
 
+//BOTON VACIAR CARRITO
+
+vaciarCarrito.addEventListener ("click", () => {
+    carrito.splice (0, carrito.length);
+    renderCarrito ();
+    totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio * producto.cantidad,0);
+    let Total = document.getElementById("total");
+    Total.innerText="Total a pagar: $"+totalCarrito;
+    }
+);
+
 //BOTON FINALIZAR COMPRA
 finalizarCompra.addEventListener ("click", () => {
     carrito = [];
@@ -121,32 +132,3 @@ finalizarCompra.addEventListener ("click", () => {
         }).showToast();
 });
 
-
-//ELIMINAR PRODUCTO DE A UNO. 
-//OPCION 1
-/*const eliminarProducto = (codigo) => {
-    let borrar = carrito.find((producto) => producto.codigo === codigo)
-    let indice = carrito.indexOf(borrar)
-    carrito.splice(indice, 1)
-    renderCarrito()
-}*/
-
-//OPCION 2
-/*
-const eliminarProducto = (e) => {
-    const borrar = carrito.find((producto) => producto.codigo === e.target.codigo);
-    let indice = carrito.indexOf(borrar)
-    carrito.splice(indice, 1)
-    renderCarrito()}
-*/
-
-
-//BOTON VACIAR CARRITO PREGUNTAR PORQUÉ NO FUNCIONA. 
-/*
-vaciarCarrito.addEventListener ("click", () => {
-    console.log ("f")
-    carrito.splice (0, carrito.length);
-    renderCarrito ();
-    }
-);
-*/
