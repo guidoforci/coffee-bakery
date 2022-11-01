@@ -118,7 +118,7 @@ vaciarCarrito.addEventListener("click", () => {
 finalizarCompra.addEventListener("click", () => {
     carrito = [];
     document.getElementById("tablabody").innerHTML = "";
-    totalizar();
+    totalizar ();
 
     Toastify({
         text: "Compra Finalizada!" + "\n" + "A la brevedad recibirás un Email con el detalle.",
