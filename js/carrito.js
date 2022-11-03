@@ -1,11 +1,10 @@
- // PRODUCTOS AGREGADOS EN arraydeproductos.js
-console.log(productos); 
+console.log(productos); // PRODUCTOS AGREGADOS EN arraydeproductos.js 
 
 //PRODUCTOS GUARDADOS EN EL LOCAL STORAGE
 const PasarProductosAJson = JSON.stringify(productos);
 localStorage.setItem("Listado de Productos", PasarProductosAJson);
 
-//VARIABLES 
+// VARIABLES 
 let carrito = JSON.parse(localStorage.getItem("Mis compras")) || [];
 let totalCarrito;
 let contenedor = document.getElementById("divCarritoJS");
@@ -13,22 +12,21 @@ let vaciarCarrito = document.getElementById("vaciarCarrito")
 let finalizarCompra = document.getElementById("finalizarCompra");
 
 
-//FUNCIÓN PARA ELIMINAR PRODUCTO
+//ELIMINAR PRODUCTO
 const eliminarProducto = (codigo) => {
     let borrar = carrito.find((producto) => producto.codigo === codigo);
     let indice = carrito.indexOf(borrar)
     carrito.splice(indice, 1)
     renderCarrito()
     localStorage.setItem("Mis compras", JSON.stringify(carrito));
-    totalizar();
+    totalizar (); 
 }
 
 //FUNCIÓN PARA CALCULAR TOTALES
-function totalizar() {
+function totalizar () {
     totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio * producto.cantidad, 0);
     let Total = document.getElementById("total");
-    Total.innerText = "Total a pagar: $" + totalCarrito;
-}
+    Total.innerText = "Total a pagar: $" + totalCarrito;}
 
 
 //RECORRIDO DE LAS CARDS 
@@ -46,15 +44,14 @@ function renderProds() {
                             </div>             
             `;
     }
-//EVENTO Click para comprar el producto.
-productos.forEach(producto => {
-        document.getElementById(`btn${producto.codigo}`).addEventListener
-        ("click", function () {agregarAlCarrito(producto);});
-    });
+    //EVENTO Click para comprar el producto.
+    productos.forEach(producto => {
+        document.getElementById(`btn${producto.codigo}`).addEventListener("click", function () {agregarAlCarrito(producto); });
+    })
 };
 renderProds();
 
-//FUNCIÓN PARA RENDERIZAR EL CARRITO
+
 function renderCarrito() {
     let tablabody = document.getElementById('tablabody')
     tablabody.innerHTML = ''
@@ -68,11 +65,12 @@ function renderCarrito() {
             <td  onClick = "eliminarProducto(${carrito.codigo})" style="color: white;"><i class="fa-regular fa-trash-can"></i></td>;
         </tr>
         `;
-    })
+    })  
 };
-//FUNCIÓN PARA AGREGAR PRODUCTOS AL CARRITO
+//AGREGAR PRODUCTOS AL CARRITO
 function agregarAlCarrito(producto) {
     let repeat = carrito.some((sumarCant) => sumarCant.codigo === producto.codigo)
+
     if (repeat) {
         carrito.forEach((prod) => {
             if (prod.codigo === producto.codigo) {
@@ -83,26 +81,28 @@ function agregarAlCarrito(producto) {
         carrito.push(producto);
     }
 
-//Alert generado con "sweet alert"
-Swal.fire({
-    position: 'top',
-    icon: 'success',
-    title: producto.nombre,
-    text: 'Fue añadido a tu carrito!',
-    showConfirmButton: false,
-    timer: 1000
-});
+    //Alert
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: producto.nombre,
+        text: 'Fue añadido a tu carrito!',
+        showConfirmButton: false,
+        timer: 1000
+    });
 
-console.table(carrito);
+    console.table(carrito);
+    localStorage.setItem("Mis compras", JSON.stringify(carrito));
 
-//TOTALIZAR COMPRA 
-totalizar();
-document.getElementById("total").innerText = "Total a pagar: $" + totalCarrito + "\n" + "\n" + "Gracias por tu compra." + "\n" + "Te esperamos por el local para retirar tu pedido!";
-localStorage.setItem("Mis compras", JSON.stringify(carrito));
-renderCarrito();
+    //TOTALIZAR COMPRA 
+    totalizar (); 
+    document.getElementById("total").innerText= "Total a pagar: $" + totalCarrito+"\n"+"\n"+"Gracias por tu compra." + "\n" + "Te esperamos por el local para retirar tu pedido!";
+    localStorage.setItem("Mis compras", JSON.stringify(carrito));
+    renderCarrito();
 }
+
 renderCarrito();
-totalizar();
+totalizar (); 
 
 
 //BOTON VACIAR CARRITO
@@ -110,7 +110,7 @@ vaciarCarrito.addEventListener("click", () => {
     carrito.splice(0, carrito.length);
     renderCarrito();
     localStorage.setItem("Mis compras", JSON.stringify(carrito));
-    totalizar();
+    totalizar (); 
 }
 );
 
@@ -118,7 +118,6 @@ vaciarCarrito.addEventListener("click", () => {
 finalizarCompra.addEventListener("click", () => {
     carrito = [];
     document.getElementById("tablabody").innerHTML = "";
-    totalizar ();
 
     Toastify({
         text: "Compra Finalizada!" + "\n" + "A la brevedad recibirás un Email con el detalle.",
@@ -126,3 +125,5 @@ finalizarCompra.addEventListener("click", () => {
         style: { background: "black", },
     }).showToast();
 });
+
+
