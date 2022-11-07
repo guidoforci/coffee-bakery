@@ -81,7 +81,7 @@ function agregarAlCarrito(producto) {
         carrito.push(producto);
     }
 
-    //Alert
+    //Alert: incorporado con sweet alert. 
     Swal.fire({
         position: 'top',
         icon: 'success',
@@ -116,14 +116,20 @@ vaciarCarrito.addEventListener("click", () => {
 
 //BOTON FINALIZAR COMPRA
 finalizarCompra.addEventListener("click", () => {
-    carrito = [];
+    if (carrito.length === 0) {Swal.fire({
+        position: 'top',
+        icon: 'error',
+        title: 'Tu carrito está vacío!',
+        text: 'No olvides seleccionar tu producto para retirar por nuestro local.',
+        showConfirmButton: false,
+        timer: 1000
+    });} else {carrito = [];
     document.getElementById("tablabody").innerHTML = "";
-
+    totalizar (); 
     Toastify({
         text: "Compra Finalizada!" + "\n" + "A la brevedad recibirás un Email con el detalle.",
         duration: 3000,
         style: { background: "black", },
     }).showToast();
-});
-
+}});
 
