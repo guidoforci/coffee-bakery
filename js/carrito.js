@@ -1,10 +1,10 @@
-console.log(productos); // PRODUCTOS AGREGADOS EN arraydeproductos.js 
 
 //PRODUCTOS GUARDADOS EN EL LOCAL STORAGE
 const PasarProductosAJson = JSON.stringify(productos);
 localStorage.setItem("Listado de Productos", PasarProductosAJson);
 
 // VARIABLES 
+let productosJSON=[];
 let carrito = JSON.parse(localStorage.getItem("Mis compras")) || [];
 let totalCarrito;
 let contenedor = document.getElementById("divCarritoJS");
@@ -31,7 +31,7 @@ function totalizar () {
 
 //RECORRIDO DE LAS CARDS 
 function renderProds() {
-    for (const producto of productos) {
+    for (const producto of productosJSON) {
         contenedor.innerHTML += `
                             <div class="col">
                                 <div class="card " style="margin: 0 auto;">
@@ -45,11 +45,10 @@ function renderProds() {
             `;
     }
     //EVENTO Click para comprar el producto.
-    productos.forEach(producto => {
+    productosJSON.forEach(producto => {
         document.getElementById(`btn${producto.codigo}`).addEventListener("click", function () {agregarAlCarrito(producto); });
     })
 };
-renderProds();
 
 
 function renderCarrito() {
@@ -81,7 +80,7 @@ function agregarAlCarrito(producto) {
         carrito.push(producto);
     }
 
-    //Alert: incorporado con sweet alert. 
+    //Alert
     Swal.fire({
         position: 'top',
         icon: 'success',
@@ -104,6 +103,19 @@ function agregarAlCarrito(producto) {
 renderCarrito();
 totalizar (); 
 
+
+//función GET de array de productos incorporados con JSON 
+async function GETdatosJSON() {
+    const URLJSON="array.json";
+    const respuestaArray = await fetch(URLJSON);
+    const tomarDatos = await respuestaArray.json();
+    productosJSON = tomarDatos;
+    
+    //renderización del array de productos
+    renderProds();
+}
+
+GETdatosJSON ();
 
 //BOTON VACIAR CARRITO
 vaciarCarrito.addEventListener("click", () => {
@@ -132,4 +144,5 @@ finalizarCompra.addEventListener("click", () => {
         style: { background: "black", },
     }).showToast();
 }});
+
 
