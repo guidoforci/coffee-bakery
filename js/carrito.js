@@ -1,8 +1,4 @@
 
-//PRODUCTOS GUARDADOS EN EL LOCAL STORAGE
-const PasarProductosAJson = JSON.stringify(productos);
-localStorage.setItem("Listado de Productos", PasarProductosAJson);
-
 // VARIABLES 
 let productosJSON=[];
 let carrito = JSON.parse(localStorage.getItem("Mis compras")) || [];
