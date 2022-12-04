@@ -133,12 +133,15 @@ finalizarCompra.addEventListener("click", () => {
         timer: 1000
     });} else {carrito = [];
     document.getElementById("tablabody").innerHTML = "";
+    localStorage.setItem("Mis compras", JSON.stringify(carrito));
     totalizar (); 
     Toastify({
         text: "Compra Finalizada!" + "\n" + "A la brevedad recibirás un Email con el detalle.",
         duration: 3000,
         style: { background: "black", },
     }).showToast();
-}});
+}})
+
+
 
 
